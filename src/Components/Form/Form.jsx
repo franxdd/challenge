@@ -22,6 +22,7 @@ function Form() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(post(input));
+    alert("Persona agregada")
     setInput({
       nombre: "",
       edad: "",
