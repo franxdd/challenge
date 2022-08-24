@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { post } from "../../Redux/Actions/action";
 
 function Form() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [input, setInput] = useState({
     nombre: "",
     edad: "",
@@ -29,6 +31,7 @@ function Form() {
       hobbie: "",
       carrera: "",
     });
+    navigate("/tabla");
   }
   return (
     <div>
